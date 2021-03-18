@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            background-color:black;
+            width: 300px;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <title>Mouse Event - Color Change </title>
+</head>
+<body>
+    <div class="box">
+        <h1>Color Change</h1>
+        <p id="childBox">When there is not light. there is Emptiness</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.box').mouseenter(function(){
+                $('.box').css('background','yellow');
+            })
+
+            $('.box').click(function(){
+                $('.box').css('background','red');
+            })
+
+            $('.box').dblclick(function(){
+                $('.box').css('background','green');
+            })
+
+            $('.box').contextmenu(function(){
+                $('.box').css('background','blue');
+            })
+
+            $('.box').mouseleave(function(){
+                $('.box').css('background','black')
+            })
+        })
+    </script>
+</body>
+</html>
