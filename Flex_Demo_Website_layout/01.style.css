@@ -12,7 +12,7 @@ a{text-decoration: none;}
 header{
     background-color: rgb(189, 98, 19);
     display: flex;
-    padding: 5px;
+    padding: 10px 5px;
 }
 
 header ul{
@@ -43,9 +43,6 @@ header ul li{
     padding: 0;
 }
 header ul li a{
-    display: block;
-    margin: 5px;
-    padding: 5px;
     color: rgb(224, 231, 238);
 }
 
@@ -56,7 +53,7 @@ header ul li a{
 aside{
     background-color: rgba(250, 247, 220, 0.562);
     border-right: 2px solid #eeee;
-    flex-basis: 20vw;    
+    flex-basis: 50vw;    
 }
 aside h3{text-align: center;}
 
@@ -68,13 +65,19 @@ aside a{
     color: rgb(19, 11, 1);
     display: block;
     margin: 5px;
-    padding:10px ;
+    padding: 5px ;
     border-bottom: 2px solid rgba(0, 0, 0, 0.356);
+    font-size: 17px;
 }
-
+#sideimage{
+ padding: 10px;
+}
+#sideimage img{
+    width: 100%;
+}
 /* artical h1 p css */
 article{background :rgba(250, 247, 220, 0.562);}
-article h1,p,h2{
+article h1,p,h2,h3{
     margin-left: 10px;
 }
 
@@ -82,10 +85,10 @@ article h1,p,h2{
 .gallery{
     display: flex;
     margin: 5px;
-    flex-basis: 1000px;
+    /* flex-basis: 1020px; */
 }
 .container{
-    border: 2px solid #eeee;
+    border: 3px solid #eeee;
     flex-basis: 450px;
     max-width: 500px;
     margin: 5px;
@@ -107,34 +110,71 @@ article h1,p,h2{
     margin: 0;
 }
 .parabox p{
-    margin: 10px;
+    margin: 5px;
 }
 
 .anchor-box{
     border: 1px solid transparent;
-    align-self: center;
-    margin-top: auto;
+    align-self: stretch ;
+    margin: auto;
 }
 
-.anchor-box a{
-    display: block;
+.anchor-box a{   
     background: rgba(75, 75, 75, 0.77);
-    padding: 10px;
     color: rgb(255, 255, 255);  
     font-size: 18px;
+    
 }
 
-.anchor-box :hover{
+.anchor-box a:hover{
     background: white;
     border: 1px solid rgba(75, 75, 75, 0.77);
     color: rgba(75, 75, 75, 0.77);
 }
+
+/* footer */
 footer{
     background-color: rgb(189, 98, 19);
     text-align: center;
     color: rgb(224, 231, 238);
+    margin: auto 0;
 }
 footer h3{color: rgb(224, 231, 238);}
 
+/* Media query */
+@media screen and (max-width: 1100px){
+    aside{
+        flex-basis: 50vw;   
+    }
+}
+@media screen and (max-width: 894px){
+    aside{
+        flex-basis: 50vw;   
+    }
+}
+@media screen and (max-width: 736px){
+    aside{
+        flex-basis: 60vw;   
+    }
+}
+@media screen and (max-width: 507px){
+    header{
+        flex-direction: column;
+    }
+    #logo{
+        order: -1;
+    }
+    header ul{
+        justify-content: center;
+    }
+}
 
+@media screen and (max-width:400px){
+    article{
+        order:-1;
+    }
+    .gallery{
+        flex-wrap: wrap;
+    }
 
+}
